@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7Bucks Media | Camera & Podcast Equipment Rental</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0b0f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f5b942, #ff3131);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      font-weight: 900;
+      box-shadow: 0 0 20px rgba(245, 185, 66, 0.5);
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #f5b942;
+    }
+
+    .hero {
+      min-height: 90vh;
+      padding: 80px 8%;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+      background: radial-gradient(circle at top right, #2a1b00, transparent 35%), #0b0b0f;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #f5b942;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #d1d1d1;
+      margin-bottom: 30px;
+      max-width: 620px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #f5b942;
+      color: #000;
+    }
+
+    .btn-secondary {
+      border: 1px solid #f5b942;
+      color: #f5b942;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(245, 185, 66, 0.25);
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, #171717, #101010);
+      padding: 30px;
+      border-radius: 25px;
+      border: 1px solid #2a2a2a;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    .hero-card img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(245, 185, 66, 0.15);
+      color: #f5b942;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      font-size: 38px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #c9c9c9;
+      max-width: 760px;
+      margin: 0 auto 45px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #151515;
+      padding: 25px;
+      border-radius: 22px;
+      border: 1px solid #282828;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #f5b942;
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: #f5b942;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #cfcfcf;
+      font-size: 15px;
+    }
+
+    .about {
+      background: #101014;
+    }
+
+    .about-box {
+      max-width: 950px;
+      margin: auto;
+      background: #171717;
+      padding: 35px;
+      border-radius: 25px;
+      border: 1px solid #2b2b2b;
+    }
+
+    .highlight {
+      color: #f5b942;
+      font-weight: bold;
+    }
+
+    .contact {
+      background: linear-gradient(135deg, #171717, #0b0b0f);
+    }
+
+    .contact-box {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      background: #151515;
+      padding: 40px;
+      border-radius: 25px;
+      border: 1px solid #2a2a2a;
+    }
+
+    .contact-info p {
+      margin: 12px 0;
+      color: #ddd;
+      font-size: 17px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #050505;
+      color: #aaa;
+      border-top: 1px solid #222;
+    }
+
+    @media (max-width: 850px) {
+      header {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="logo-icon">7B</div>
+      <div>7Bucks Media</div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Products/Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div>
+      <div class="badge">Available 24×7 • Rental in Delhi</div>
+      <h1>Rent Gear. Manage Shoots. Create <span>Better Content.</span></h1>
+      <p>
+        7Bucks Media provides high-quality cameras, microphones, lights, podcast gear, and complete media production support for podcasts, short films, documentaries, interviews, reels, and brand shoots.
+      </p>
+      <div class="buttons">
+        <a href="#services" class="btn btn-primary">Rent Equipment</a>
+        <a href="#contact" class="btn btn-secondary">Contact for Service</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=80" alt="Camera equipment">
+      <h3>Professional Media Setup</h3>
+      <p>Camera, mic, lighting, tripod, podcast setup, crew support, and complete production management.</p>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="section-title">About Us</h2>
+    <p class="section-subtitle">We help creators, brands, filmmakers, and podcasters shoot professionally without stress.</p>
+    <div class="about-box">
+      <p>
+        <span class="highlight">7Bucks Media</span> is a Delhi-based media service brand focused on equipment rental and full shoot management. Our team provides cameras, microphones, lighting, podcast setup, and experienced crew support according to the client’s requirement.
+      </p>
+      <br>
+      <p>
+        We do not show fixed prices because every project is different. Whether you need a camera for rent, a sound recordist, photographer, cameraman, assistant, or complete podcast/film management, you can contact us directly for the <span class="highlight">best custom deal</span>.
+      </p>
+      <br>
+      <p>
+        Our team believes in smooth management, professional quality, fast response, and reliable service for every client.
+      </p>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">Products & Services</h2>
+    <p class="section-subtitle">High-quality rental items and professional media services. Contact us for best deals.</p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=900&q=80" alt="Camera rental">
+        <h3>Camera Rental</h3>
+        <p>DSLR, mirrorless, cinema-style camera setup, lenses, tripod and complete shooting gear for creators and filmmakers.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=900&q=80" alt="Microphone rental">
+        <h3>Microphone & Audio Gear</h3>
+        <p>Podcast microphones, wireless mics, recorders and audio accessories for interviews, podcasts and documentary shoots.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=900&q=80" alt="Podcast setup">
+        <h3>Podcast Setup Management</h3>
+        <p>Complete podcast setup with camera, sound, lights, seating arrangement and technical support.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80" alt="Production service">
+        <h3>Short Film & Documentary Support</h3>
+        <p>Equipment and crew support for short films, documentaries, interviews, reels and commercial shoots.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=900&q=80" alt="Photography service">
+        <h3>Photography & Videography</h3>
+        <p>Professional photography, videography, cameraman support and shoot assistance based on client needs.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=900&q=80" alt="Editing and management">
+        <h3>Full Shoot Management</h3>
+        <p>From planning to execution, our team manages your shoot so you can focus on performance and content.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-subtitle">No fixed price. Contact us and get the best deal according to your requirement.</p>
+
+    <div class="contact-box">
+      <h3>Book Equipment or Services</h3>
+      <div class="contact-info">
+        <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
+        <p><strong>Gmail:</strong> yourgmail@gmail.com</p>
+        <p><strong>Instagram:</strong> @7bucksmedia</p>
+        <p><strong>Rental Location:</strong> Delhi</p>
+        <p><strong>Service Area:</strong> Depends on client requirement</p>
+        <p><strong>Available:</strong> 24×7</p>
+      </div>
+      <br>
+      <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-primary">Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 7Bucks Media. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
+            
