@@ -1407,188 +1407,136 @@
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <div class="logo-icon"><span>7</span><span>B</span><span>M</span></div>
-      <div>7Bucks Media</div>
-    </div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Products/Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Details | 7Bucks Media</title>
 
-  <section class="hero" id="home">
-    <div>
-      <div class="badge">Available 24×7 • Rental in Delhi</div>
-      <h1>Rent Gear. Manage Shoots. Create <span>Better Content.</span></h1>
-      <p>
-        7Bucks Media provides high-quality cameras, microphones, lights, podcast gear, and complete media production support for podcasts, short films, documentaries, interviews, reels, and brand shoots.
-      </p>
-      <div class="buttons">
-        <a href="#services" class="btn btn-primary">Rent Equipment</a>
-        <a href="#contact" class="btn btn-secondary">Contact for Service</a>
-      </div>
-    </div>
+  <style>
+    body {
+      margin: 0;
+      background: #0b0b0f;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
 
-    <div class="hero-card">
-      <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=80" alt="Camera equipment">
-      <h3>Professional Media Setup</h3>
-      <p>Camera, mic, lighting, tripod, podcast setup, crew support, and complete production management.</p>
-    </div>
-  </section>
+    .box {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #151515;
+      padding: 35px;
+      border-radius: 25px;
+      border: 1px solid #f5b942;
+    }
 
-  <section class="about" id="about">
-    <h2 class="section-title">About Us</h2>
-    <p class="section-subtitle">We help creators, brands, filmmakers, and podcasters shoot professionally without stress.</p>
-    <div class="about-box">
-      <p>
-        <span class="highlight">7Bucks Media</span> is a Delhi-based media service brand focused on equipment rental and full shoot management. Our team provides cameras, microphones, lighting, podcast setup, and experienced crew support according to the client’s requirement.
-      </p>
-      <br>
-      <p>
-        We do not show fixed prices because every project is different. Whether you need a camera for rent, a sound recordist, photographer, cameraman, assistant, or complete podcast/film management, you can contact us directly for the <span class="highlight">best custom deal</span>.
-      </p>
-      <br>
-      <p>
-        Our team believes in smooth management, professional quality, fast response, and reliable service for every client.
-      </p>
-    </div>
-  </section>
+    h1 {
+      color: #f5b942;
+      font-size: 42px;
+    }
 
-  <section id="services">
-    <h2 class="section-title">Products & Services</h2>
-    <p class="section-subtitle">High-quality rental items and professional media services. Contact us for best deals.</p>
+    p, li {
+      color: #ddd;
+      font-size: 18px;
+      line-height: 1.7;
+    }
 
-    <div class="grid">
-     <div class="card" onclick="window.location.href='service.html?type=camera'" style="cursor:pointer;">
-        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=900&q=80" alt="Camera rental">
-        <h3>Camera Rental</h3>
-        <p>DSLR, mirrorless, cinema-style camera setup, lenses, tripod and complete shooting gear for creators and filmmakers.</p>
-      </div>
+    .btn {
+      display: inline-block;
+      margin: 15px 10px 0 0;
+      padding: 14px 24px;
+      border-radius: 30px;
+      background: #f5b942;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-      <div class="card" onclick="window.location.href='service.html?type=audio'" style="cursor:pointer;">
-        <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=900&q=80" alt="Microphone rental">
-        <h3>Microphone & Audio Gear</h3>
-        <p>Podcast microphones, wireless mics, recorders and audio accessories for interviews, podcasts and documentary shoots.</p>
-      </div>
+    .back {
+      color: #f5b942;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
 
-      <div class="card" onclick="window.location.href='service.html?type=podcast'" style="cursor:pointer;">
-        <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=900&q=80" alt="Podcast setup">
-        <h3>Podcast Setup Management</h3>
-        <p>Complete podcast setup with camera, sound, lights, seating arrangement and technical support.</p>
-      </div>
+<body>
 
-     <div class="card" onclick="window.location.href='service.html?type=film'" style="cursor:pointer;">
-        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80" alt="Production service">
-        <h3>Short Film & Documentary Support</h3>
-        <p>Equipment and crew support for short films, documentaries, interviews, reels and commercial shoots.</p>
-      </div>
+  <a href="index.html" class="back">← Back to Home</a>
 
-      <div class="card service-card" onclick="openService('photo')">
-        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=900&q=80" alt="Photography service">
-        <h3>Photography & Videography</h3>
-        <p>Professional photography, videography, cameraman support and shoot assistance based on client needs.</p>
-      </div>
+  <div class="box">
+    <h1 id="title"></h1>
+    <p id="desc"></p>
 
-      <div class="card service-card" onclick="openService('management')">
-        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=900&q=80" alt="Editing and management">
-        <h3>Full Shoot Management</h3>
-        <p>From planning to execution, our team manages your shoot so you can focus on performance and content.</p>
-      </div>
-    </div>
-  </section>
+    <h2>What We Provide</h2>
+    <ul id="list"></ul>
 
-  <section class="contact" id="contact">
-    <h2 class="section-title">Contact Us</h2>
-    <p class="section-subtitle">No fixed price. Contact us and get the best deal according to your requirement.</p>
-
-    <div class="contact-box">
-      <h3>Book Equipment or Services</h3>
-      <div class="contact-info">
-        <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
-        <p><strong>Gmail:</strong> yourgmail@gmail.com</p>
-        <p><strong>Instagram:</strong> @7bucksmedia</p>
-        <p><strong>Rental Location:</strong> Delhi</p>
-        <p><strong>Service Area:</strong> Depends on client requirement</p>
-        <p><strong>Available:</strong> 24×7</p>
-      </div>
-      <br>
-      <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-primary">Chat on WhatsApp</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 7Bucks Media. All Rights Reserved.</p>
-  </footer>
-
-
-  <!-- Service Details Popup -->
-  <div class="service-modal" id="serviceModal">
-    <div class="modal-content">
-      <button class="close-btn" onclick="closeService()">×</button>
-      <h2 id="modalTitle">Service Title</h2>
-      <p id="modalText">Service details will appear here.</p>
-      <ul id="modalList"></ul>
-      <div class="modal-actions">
-        <a id="modalWhatsapp" href="#" class="btn btn-primary" target="_blank">Contact on WhatsApp</a>
-        <a href="#contact" onclick="closeService()" class="btn btn-secondary">Go to Contact</a>
-      </div>
-    </div>
+    <a id="whatsapp" class="btn" target="_blank">Contact on WhatsApp</a>
+    <a href="index.html#contact" class="btn">Contact Page</a>
   </div>
 
   <script>
-    const phoneNumber = "919716053599"; // Replace with your WhatsApp number
+    const phone = "919716053599"; // add your number here
 
     const services = {
       camera: {
         title: "Camera Rental",
-        text: "Rent professional cameras and shooting gear for podcasts, short films, documentaries, interviews, reels and brand shoots. Available in Delhi.",
-        points: ["DSLR / Mirrorless Cameras", "Lenses and Tripods", "Best deal according to requirement", "24×7 availability"]
+        desc: "Rent professional cameras and shooting gear for podcasts, short films, documentaries, interviews, reels, and brand shoots. Available in Delhi.",
+        list: ["DSLR cameras", "Mirrorless cameras", "Lenses", "Tripods", "Custom best deal"]
       },
+
       audio: {
         title: "Microphone & Audio Gear",
-        text: "Get clean audio setup for podcast, interview, documentary and video production.",
-        points: ["Podcast Microphones", "Wireless Mics", "Audio Recorder", "Sound setup support"]
+        desc: "Professional audio gear for podcasts, interviews, documentaries, and video production.",
+        list: ["Podcast microphones", "Wireless mics", "Audio recorders", "Sound setup support", "Clean voice recording"]
       },
+
       podcast: {
         title: "Podcast Setup Management",
-        text: "Complete podcast setup and management for creators, brands and interviews.",
-        points: ["Camera setup", "Mic and sound setup", "Lighting arrangement", "Full technical support"]
+        desc: "Complete podcast setup and management for creators, brands, interviews, and content studios.",
+        list: ["Camera setup", "Mic setup", "Lighting setup", "Seating arrangement", "Technical support"]
       },
+
       film: {
         title: "Short Film & Documentary Support",
-        text: "Equipment and crew support for short films, documentaries, interviews and commercial videos.",
-        points: ["Camera crew", "Sound recordist", "Assistant support", "Shoot planning"]
+        desc: "Equipment and crew support for short films, documentaries, interviews, reels, and commercial shoots.",
+        list: ["Cameraman", "Sound recordist", "Assistant", "Shoot planning", "Production support"]
       },
+
       photo: {
         title: "Photography & Videography",
-        text: "Professional photography and videography services according to client needs.",
-        points: ["Event shoots", "Brand shoots", "Cameraman service", "Photo and video coverage"]
+        desc: "Professional photography and videography services according to your shoot requirement.",
+        list: ["Event photography", "Brand shoots", "Video coverage", "Cameraman service", "Creative shoot support"]
       },
+
       management: {
         title: "Full Shoot Management",
-        text: "Our team manages your complete shoot from planning to execution so you can focus on content.",
-        points: ["Team coordination", "Equipment arrangement", "Shoot execution", "Custom deals"]
+        desc: "Our team manages your complete shoot from planning to execution so you can focus on content.",
+        list: ["Team coordination", "Equipment arrangement", "Shoot execution", "Client-based planning", "Best custom deals"]
       }
     };
 
-    function openService(type) {
-      const service = services[type];
-      document.getElementById("modalTitle").innerText = service.title;
-      document.getElementById("modalText").innerText = service.text;
-      document.getElementById("modalList").innerHTML = service.points.map(point => `<li>${point}</li>`).join("");
-      const message = encodeURIComponent(`Hello 7Bucks Media, I want details about ${service.title}. Please share the best deal.`);
-      document.getElementById("modalWhatsapp").href = `https://wa.me/${phoneNumber}?text=${message}`;
-      document.getElementById("serviceModal").style.display = "flex";
-    }
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get("type");
+    const service = services[type] || services.camera;
 
-    function closeService() {
-      document.getElementById("serviceModal").style.display = "none";
-    }
+    document.getElementById("title").innerText = service.title;
+    document.getElementById("desc").innerText = service.desc;
+    document.getElementById("list").innerHTML =
+      service.list.map(item => `<li>${item}</li>`).join("");
+
+    const message = encodeURIComponent(
+      "Hello 7Bucks Media, I want details about " + service.title + ". Please share the best deal."
+    );
+
+    document.getElementById("whatsapp").href =
+      "https://wa.me/" + phone + "?text=" + message;
   </script>
+
+</body>
+</html>
 
 </body>
 </html>
