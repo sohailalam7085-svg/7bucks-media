@@ -935,8 +935,660 @@
     <p>© 2026 7Bucks Media. All Rights Reserved.</p>
   </footer>
 
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7Bucks Media | Camera & Podcast Equipment Rental</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0b0f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: #0b0b0f;
+      border: 3px solid #f5b942;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f5b942;
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: -1px;
+      box-shadow: 0 0 22px rgba(245, 185, 66, 0.55);
+    }
+
+    .logo-icon span:first-child {
+      color: #ffffff;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #f5b942;
+    }
+
+    .hero {
+      min-height: 90vh;
+      padding: 80px 8%;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+      background: radial-gradient(circle at top right, #2a1b00, transparent 35%), #0b0b0f;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #f5b942;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #d1d1d1;
+      margin-bottom: 30px;
+      max-width: 620px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #f5b942;
+      color: #000;
+    }
+
+    .btn-secondary {
+      border: 1px solid #f5b942;
+      color: #f5b942;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(245, 185, 66, 0.25);
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, #171717, #101010);
+      padding: 30px;
+      border-radius: 25px;
+      border: 1px solid #2a2a2a;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    .hero-card img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(245, 185, 66, 0.15);
+      color: #f5b942;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      font-size: 38px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #c9c9c9;
+      max-width: 760px;
+      margin: 0 auto 45px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #151515;
+      padding: 25px;
+      border-radius: 22px;
+      border: 1px solid #282828;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #f5b942;
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: #f5b942;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #cfcfcf;
+      font-size: 15px;
+    }
+
+    .about {
+      background: #101014;
+    }
+
+    .about-box {
+      max-width: 950px;
+      margin: auto;
+      background: #171717;
+      padding: 35px;
+      border-radius: 25px;
+      border: 1px solid #2b2b2b;
+    }
+
+    .highlight {
+      color: #f5b942;
+      font-weight: bold;
+    }
+
+    .contact {
+      background: linear-gradient(135deg, #171717, #0b0b0f);
+    }
+
+    .contact-box {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      background: #151515;
+      padding: 40px;
+      border-radius: 25px;
+      border: 1px solid #2a2a2a;
+    }
+
+    .contact-info p {
+      margin: 12px 0;
+      color: #ddd;
+      font-size: 17px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #050505;
+      color: #aaa;
+      border-top: 1px solid #222;
+    }
+
+    @media (max-width: 850px) {
+      header {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+    }
+  
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(35px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeRight {
+      from {
+        opacity: 0;
+        transform: translateX(-35px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.92);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .hero h1,
+    .hero p,
+    .buttons,
+    .section-title,
+    .section-subtitle,
+    .about-box,
+    .contact-box {
+      animation: fadeUp 0.9s ease forwards;
+    }
+
+    .badge {
+      animation: fadeRight 0.8s ease forwards;
+    }
+
+    .hero-card {
+      animation: zoomIn 1s ease forwards;
+    }
+
+    .card {
+      opacity: 0;
+      animation: fadeUp 0.9s ease forwards;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4) { animation-delay: 0.4s; }
+    .card:nth-child(5) { animation-delay: 0.5s; }
+    .card:nth-child(6) { animation-delay: 0.6s; }
+
+    .logo-icon {
+      animation: zoomIn 0.8s ease forwards;
+    }
+
+    nav a {
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background: #f5b942;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero-card img,
+    .card img {
+      transition: 0.5s ease;
+    }
+
+    .hero-card:hover img,
+    .card:hover img {
+      transform: scale(1.04);
+      filter: brightness(1.1);
+    }
+
+    .btn {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.25);
+      transition: 0.4s ease;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+
+    .service-card {
+      cursor: pointer;
+    }
+
+    .service-card::after {
+      content: "Tap to view details →";
+      display: inline-block;
+      margin-top: 15px;
+      color: #f5b942;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .service-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.82);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      width: 100%;
+      max-width: 620px;
+      background: #151515;
+      border: 1px solid #f5b942;
+      border-radius: 24px;
+      padding: 35px;
+      position: relative;
+      animation: zoomIn 0.35s ease forwards;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.65);
+    }
+
+    .modal-content h2 {
+      color: #f5b942;
+      margin-bottom: 15px;
+      font-size: 32px;
+    }
+
+    .modal-content p {
+      color: #dddddd;
+      margin-bottom: 18px;
+    }
+
+    .modal-content ul {
+      margin-left: 20px;
+      margin-bottom: 25px;
+      color: #eeeeee;
+    }
+
+    .modal-content li {
+      margin-bottom: 8px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 18px;
+      background: transparent;
+      color: #fff;
+      border: none;
+      font-size: 32px;
+      cursor: pointer;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="logo-icon"><span>7</span><span>B</span><span>M</span></div>
+      <div>7Bucks Media</div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Products/Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div>
+      <div class="badge">Available 24×7 • Rental in Delhi</div>
+      <h1>Rent Gear. Manage Shoots. Create <span>Better Content.</span></h1>
+      <p>
+        7Bucks Media provides high-quality cameras, microphones, lights, podcast gear, and complete media production support for podcasts, short films, documentaries, interviews, reels, and brand shoots.
+      </p>
+      <div class="buttons">
+        <a href="#services" class="btn btn-primary">Rent Equipment</a>
+        <a href="#contact" class="btn btn-secondary">Contact for Service</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=80" alt="Camera equipment">
+      <h3>Professional Media Setup</h3>
+      <p>Camera, mic, lighting, tripod, podcast setup, crew support, and complete production management.</p>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="section-title">About Us</h2>
+    <p class="section-subtitle">We help creators, brands, filmmakers, and podcasters shoot professionally without stress.</p>
+    <div class="about-box">
+      <p>
+        <span class="highlight">7Bucks Media</span> is a Delhi-based media service brand focused on equipment rental and full shoot management. Our team provides cameras, microphones, lighting, podcast setup, and experienced crew support according to the client’s requirement.
+      </p>
+      <br>
+      <p>
+        We do not show fixed prices because every project is different. Whether you need a camera for rent, a sound recordist, photographer, cameraman, assistant, or complete podcast/film management, you can contact us directly for the <span class="highlight">best custom deal</span>.
+      </p>
+      <br>
+      <p>
+        Our team believes in smooth management, professional quality, fast response, and reliable service for every client.
+      </p>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">Products & Services</h2>
+    <p class="section-subtitle">High-quality rental items and professional media services. Contact us for best deals.</p>
+
+    <div class="grid">
+      <div class="card service-card" onclick="openService('camera')">
+        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=900&q=80" alt="Camera rental">
+        <h3>Camera Rental</h3>
+        <p>DSLR, mirrorless, cinema-style camera setup, lenses, tripod and complete shooting gear for creators and filmmakers.</p>
+      </div>
+
+      <div class="card service-card" onclick="openService('audio')">
+        <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=900&q=80" alt="Microphone rental">
+        <h3>Microphone & Audio Gear</h3>
+        <p>Podcast microphones, wireless mics, recorders and audio accessories for interviews, podcasts and documentary shoots.</p>
+      </div>
+
+      <div class="card service-card" onclick="openService('podcast')">
+        <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=900&q=80" alt="Podcast setup">
+        <h3>Podcast Setup Management</h3>
+        <p>Complete podcast setup with camera, sound, lights, seating arrangement and technical support.</p>
+      </div>
+
+      <div class="card service-card" onclick="openService('film')">
+        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80" alt="Production service">
+        <h3>Short Film & Documentary Support</h3>
+        <p>Equipment and crew support for short films, documentaries, interviews, reels and commercial shoots.</p>
+      </div>
+
+      <div class="card service-card" onclick="openService('photo')">
+        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=900&q=80" alt="Photography service">
+        <h3>Photography & Videography</h3>
+        <p>Professional photography, videography, cameraman support and shoot assistance based on client needs.</p>
+      </div>
+
+      <div class="card service-card" onclick="openService('management')">
+        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=900&q=80" alt="Editing and management">
+        <h3>Full Shoot Management</h3>
+        <p>From planning to execution, our team manages your shoot so you can focus on performance and content.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-subtitle">No fixed price. Contact us and get the best deal according to your requirement.</p>
+
+    <div class="contact-box">
+      <h3>Book Equipment or Services</h3>
+      <div class="contact-info">
+        <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
+        <p><strong>Gmail:</strong> yourgmail@gmail.com</p>
+        <p><strong>Instagram:</strong> @7bucksmedia</p>
+        <p><strong>Rental Location:</strong> Delhi</p>
+        <p><strong>Service Area:</strong> Depends on client requirement</p>
+        <p><strong>Available:</strong> 24×7</p>
+      </div>
+      <br>
+      <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-primary">Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 7Bucks Media. All Rights Reserved.</p>
+  </footer>
+
+
+  <!-- Service Details Popup -->
+  <div class="service-modal" id="serviceModal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeService()">×</button>
+      <h2 id="modalTitle">Service Title</h2>
+      <p id="modalText">Service details will appear here.</p>
+      <ul id="modalList"></ul>
+      <div class="modal-actions">
+        <a id="modalWhatsapp" href="#" class="btn btn-primary" target="_blank">Contact on WhatsApp</a>
+        <a href="#contact" onclick="closeService()" class="btn btn-secondary">Go to Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const phoneNumber = "919716053599"; // Replace with your WhatsApp number
+
+    const services = {
+      camera: {
+        title: "Camera Rental",
+        text: "Rent professional cameras and shooting gear for podcasts, short films, documentaries, interviews, reels and brand shoots. Available in Delhi.",
+        points: ["DSLR / Mirrorless Cameras", "Lenses and Tripods", "Best deal according to requirement", "24×7 availability"]
+      },
+      audio: {
+        title: "Microphone & Audio Gear",
+        text: "Get clean audio setup for podcast, interview, documentary and video production.",
+        points: ["Podcast Microphones", "Wireless Mics", "Audio Recorder", "Sound setup support"]
+      },
+      podcast: {
+        title: "Podcast Setup Management",
+        text: "Complete podcast setup and management for creators, brands and interviews.",
+        points: ["Camera setup", "Mic and sound setup", "Lighting arrangement", "Full technical support"]
+      },
+      film: {
+        title: "Short Film & Documentary Support",
+        text: "Equipment and crew support for short films, documentaries, interviews and commercial videos.",
+        points: ["Camera crew", "Sound recordist", "Assistant support", "Shoot planning"]
+      },
+      photo: {
+        title: "Photography & Videography",
+        text: "Professional photography and videography services according to client needs.",
+        points: ["Event shoots", "Brand shoots", "Cameraman service", "Photo and video coverage"]
+      },
+      management: {
+        title: "Full Shoot Management",
+        text: "Our team manages your complete shoot from planning to execution so you can focus on content.",
+        points: ["Team coordination", "Equipment arrangement", "Shoot execution", "Custom deals"]
+      }
+    };
+
+    function openService(type) {
+      const service = services[type];
+      document.getElementById("modalTitle").innerText = service.title;
+      document.getElementById("modalText").innerText = service.text;
+      document.getElementById("modalList").innerHTML = service.points.map(point => `<li>${point}</li>`).join("");
+      const message = encodeURIComponent(`Hello 7Bucks Media, I want details about ${service.title}. Please share the best deal.`);
+      document.getElementById("modalWhatsapp").href = `https://wa.me/${phoneNumber}?text=${message}`;
+      document.getElementById("serviceModal").style.display = "flex";
+    }
+
+    function closeService() {
+      document.getElementById("serviceModal").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
