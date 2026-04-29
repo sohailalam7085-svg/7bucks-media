@@ -1461,37 +1461,37 @@
     <p class="section-subtitle">High-quality rental items and professional media services. Contact us for best deals.</p>
 
     <div class="grid">
-      <div class="card service-card" onclick="openService('camera')">
+      <div class="card" onclick="openService('camera')" style="cursor:pointer;">
         <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=900&q=80" alt="Camera rental">
         <h3>Camera Rental</h3>
         <p>DSLR, mirrorless, cinema-style camera setup, lenses, tripod and complete shooting gear for creators and filmmakers.</p>
       </div>
 
-      <div class="card service-card" onclick="openService('audio')">
+      <div class="card" onclick="openService('audio')" style="cursor:pointer;">
         <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=900&q=80" alt="Microphone rental">
         <h3>Microphone & Audio Gear</h3>
         <p>Podcast microphones, wireless mics, recorders and audio accessories for interviews, podcasts and documentary shoots.</p>
       </div>
 
-      <div class="card service-card" onclick="openService('podcast')">
+     <div class="card" onclick="openService('podcast')" style="cursor:pointer;">
         <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=900&q=80" alt="Podcast setup">
         <h3>Podcast Setup Management</h3>
         <p>Complete podcast setup with camera, sound, lights, seating arrangement and technical support.</p>
       </div>
 
-      <div class="card service-card" onclick="openService('film')">
+      <div class="card" onclick="openService('short film')" style="cursor:pointer;">
         <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80" alt="Production service">
         <h3>Short Film & Documentary Support</h3>
         <p>Equipment and crew support for short films, documentaries, interviews, reels and commercial shoots.</p>
       </div>
 
-      <div class="card service-card" onclick="openService('photo')">
+    <div class="card" onclick="openService('photography')" style="cursor:pointer;">
         <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=900&q=80" alt="Photography service">
         <h3>Photography & Videography</h3>
         <p>Professional photography, videography, cameraman support and shoot assistance based on client needs.</p>
       </div>
 
-      <div class="card service-card" onclick="openService('management')">
+      <div class="card" onclick="openService('management')" style="cursor:pointer;">
         <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=900&q=80" alt="Editing and management">
         <h3>Full Shoot Management</h3>
         <p>From planning to execution, our team manages your shoot so you can focus on performance and content.</p>
@@ -1506,7 +1506,7 @@
     <div class="contact-box">
       <h3>Book Equipment or Services</h3>
       <div class="contact-info">
-        <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
+        <p><strong>Phone:</strong> +91 9716053599</p>
         <p><strong>Gmail:</strong> yourgmail@gmail.com</p>
         <p><strong>Instagram:</strong> @7bucksmedia</p>
         <p><strong>Rental Location:</strong> Delhi</p>
@@ -1514,7 +1514,7 @@
         <p><strong>Available:</strong> 24×7</p>
       </div>
       <br>
-      <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-primary">Chat on WhatsApp</a>
+      <a href="https://wa.me/919716053599" class="btn btn-primary">Chat on WhatsApp</a>
     </div>
   </section>
 
@@ -1538,7 +1538,7 @@
   </div>
 
   <script>
-    const phoneNumber = "91XXXXXXXXXX"; // Replace with your WhatsApp number
+    const phoneNumber = "919716053599"; // Replace with your WhatsApp number
 
     const services = {
       camera: {
@@ -1588,10 +1588,84 @@
     }
   </script>
 
-</body>
-</html>
+  <div id="serviceBox" class="service-box">
+  <div class="service-content">
+    <button onclick="closeService()" class="close-btn">×</button>
+    <h2 id="serviceTitle"></h2>
+    <p id="serviceDesc"></p>
+    <ul id="serviceList"></ul>
+    <a id="serviceWhatsapp" class="btn btn-primary" target="_blank">Contact on WhatsApp</a>
+  </div>
+</div>
 
-</style>
+<script>
+const phone = "919716053599"; // add your number
+
+const serviceData = {
+  camera: {
+    title: "Camera Rental",
+    desc: "Rent professional cameras for podcasts, reels, short films, documentaries and interviews.",
+    list: ["DSLR / Mirrorless Cameras", "Lenses", "Tripods", "Available in Delhi"]
+  },
+  audio: {
+    title: "Microphone & Audio Gear",
+    desc: "Clean audio setup for podcasts, interviews and documentary shoots.",
+    list: ["Podcast Mics", "Wireless Mics", "Audio Recorder", "Sound Setup"]
+  },
+  podcast: {
+    title: "Podcast Setup Management",
+    desc: "Complete podcast setup with camera, mic, lights and technical support.",
+    list: ["Camera Setup", "Mic Setup", "Lighting", "Full Management"]
+  }
+};
+
+
+}
+</script>
+
+  .service-box {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.service-content {
+  background: #151515;
+  border: 1px solid #f5b942;
+  border-radius: 25px;
+  padding: 35px;
+  max-width: 600px;
+  width: 100%;
+  color: white;
+}
+
+.service-content h2 {
+  color: #f5b942;
+  font-size: 34px;
+}
+
+.service-content p,
+.service-content li {
+  color: #ddd;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.close-btn {
+  float: right;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+  </style>
 </head>
 
 </html>
